@@ -33,8 +33,12 @@ a, a:hover, a:focus {
   font-weight: normal;
 }
 
-.demo {
+.demo, .developers {
   margin: 60px 0 100px;
+}
+
+.demo-ctas {
+  display: flex;
 }
 
 .demo-link {
@@ -59,4 +63,14 @@ a, a:hover, a:focus {
 
 .demo-link.gray {
   background: #c8d1dc;
+}
+
+pre {
+  white-space: pre-line;
+  background: #fdf6e3;
+}
+
+code {
+  color: #657b83;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
