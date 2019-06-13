@@ -33,16 +33,19 @@ a, a:hover, a:focus {
 }
 
 .demo-link {
+  padding: 8px 15px 10px;
+  min-width: 96px;
   border-radius: 100px;
   font-family: Graphik-Medium;
   font-size: 12px;
   line-height: 16px;
+  text-decoration: none;
 }
 
-.demo-link green {
+.demo-link .green {
   background: #7ed321;
 }
 
-.demo-link gray {
+.demo-link .gray {
   background: #c8d1dc;
 }
