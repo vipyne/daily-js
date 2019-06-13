@@ -35,7 +35,7 @@ a, a:hover, a:focus {
   font-weight: normal;
 }
 
-.demo, .developers {
+.demo {
   margin: 60px 0 100px;
 }
 
@@ -66,6 +66,10 @@ a, a:hover, a:focus {
 
 .demo-link.gray {
   background: #c8d1dc;
+}
+
+.developers {
+  margin: 100px 0;
 }
 
 pre {
