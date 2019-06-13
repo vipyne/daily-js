@@ -20,6 +20,7 @@
         {% endif %}
 
         <p>{{ site.description | default: site.github.project_tagline }}</p>
+        <p><a href="https://github.com/daily-co/daily-js">View the project on GitHub</a></p>
 
         <!-- HIDE GITHUB LINKS
         {% if site.github.is_project_page %}
@@ -42,7 +43,17 @@
       </header>
       
       <section>
-      {{ content }}
+        <h1>daily-js video call demos</h1>
+        <p>Demos and sample code. Links below to both the code for each demo and to a live version you can run without checking out this repo locally.</p>
+        <p>When running the live demos, it’s useful to have your js console open.</p>
+        <p>Jump to a demo:</p>
+        <ol>
+          <li><strong>Super-simple Demo:</strong> a simple iframe demo</li>
+          <li><strong>Standard/Custom UI Demo:</strong> toggle between our default UI and custom UI</li>
+          <li><strong>Custom CSS Grid Demo:</strong> a customized, colorful demo that uses CSS grid</li>
+          <li><strong>Remote monitoring use case:</strong> One-way video, and managing bandwidth use dynamically</li>
+        </ol>
+        <hr>
       </section>
       
       <!-- HIDE FOOTER
