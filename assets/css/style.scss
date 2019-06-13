@@ -8,6 +8,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 60px 0;
+  font-size: 16px;
 }
 
 hr {
@@ -88,10 +89,14 @@ code {
   }
 
   header {
-    padding: 0 0 60px;
+    padding: 0 0 40px;
   }
 
   section {
     padding: 100px 0;
+    border: none;
   }
+  
+  .demo, .developers {
+    padding: 60px 0 60px;
 }
