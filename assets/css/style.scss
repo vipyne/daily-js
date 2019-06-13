@@ -82,7 +82,7 @@ code {
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
-@media print, screen and (max-width: 960px)
+@media print, screen and (max-width: 960px) {
   body {
     padding: 20px;
   }
@@ -94,3 +94,4 @@ code {
   section {
     padding: 100px 0;
   }
+}
