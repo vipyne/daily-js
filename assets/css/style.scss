@@ -36,6 +36,16 @@ h2 {
   line-height: 38px;
 }
 
+a, a:hover, a:focus {
+  color: #1f2d3d;
+  text-decoration: underline;
+  font-weight: inherit;
+}
+
+strong a {
+  font-weight: 800;
+}
+
 header {
   background: #F7F9FA;
   padding: 34px;
@@ -46,12 +56,6 @@ header {
 
 #logo {
   margin-bottom: 22px;
-}
-
-a, a:hover, a:focus {
-  color: #1f2d3d;
-  text-decoration: underline;
-  font-weight: normal;
 }
 
 .demo {
