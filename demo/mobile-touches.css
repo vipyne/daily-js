@@ -51,7 +51,7 @@
 .daily-video-overlay.mic-muted::before {
 	content: "";
 	position: absolute;
-	background-image: url(/demo/icon-microphone-off-white.svg);
+	background-image: url(./icon-microphone-off-white.svg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 24px 24px;
