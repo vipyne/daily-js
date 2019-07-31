@@ -18,7 +18,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url(/demo/muted-microphone.svg);
+  background-image: url(./muted-microphone.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 20%;
