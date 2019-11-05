@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>face detection test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script crossorigin src="https://unpkg.com/@daily-co/daily-js@0.9.9-beta.1"></script>
+<!-- <script src="../dist/daily-iframe.js"></script> -->
+</head>
+<body onload="join()">
+
+<script>
+
+//
+//
+//
+
+async function join() {
+  //
+  // create call object, and set up important event
+  // listeners
+  //
+  callFrame = DailyIframe.createFrame({
+    url: 'https://hq.daily.co/face-detection-mt',
+    showLeaveButton: true,
+    iframeStyle: {
+      position: 'fixed', border: 0, top: 0, left: 0,
+      width: '100%', height: '100%'
+    }
+  });
+
+  callFrame.on('error', unrecoverableError);
+  await callFrame.join();
+  checkForFaces();
+}
+
+function unrecoverableError(evt) {
+  console.log('HANDLE UNRECOVERABLE ERROR HERE -- RELOAD AND RECONNECT');
+  console.log(evt);
+}
+
+async function checkForFaces() {
+  try {
+    if (callFrame.meetingState() !== 'joined-meeting') {
+      return;
+    }
+    // remove all bounding boxes
+    for (let el of document.getElementsByClassName('face-boxes')) {
+      el.remove();
+    }
+    // detect faces
+    let msg = await callFrame.detectAllFaces();
+    // add bounding boxes
+    iframeBounds = callFrame.iframe().getBoundingClientRect();
+    for (let participant of Object.values(msg.faces)) {
+      for (let face of participant) {
+        let el = document.createElement('div');
+        el.style.position = 'fixed';
+        el.style.border = '2px dashed yellow';
+        el.style.top = iframeBounds.top + face.viewportBox.top;
+        el.style.left = iframeBounds.left + face.viewportBox.left;
+        el.style.width = face.viewportBox.width;
+        el.style.height = face.viewportBox.height;
+        document.body.appendChild(el);
+        el.className = 'face-boxes';
+      }
+    }
+    setTimeout(checkForFaces, 100);
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+</script>
+
+</body>
+</html>
